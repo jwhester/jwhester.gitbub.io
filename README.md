@@ -1,2 +1,2 @@
-# jwhester.gitbub.io
+# jwhester.github.io
 Personal site
