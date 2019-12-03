@@ -141,7 +141,7 @@ table, th, td {
 .skills {
     width: 100vw;
     height: 100%;
-    background-color: green;
+    background-color: #76B852;
     color: white;
     flex: 0 0 auto;
     display: grid;

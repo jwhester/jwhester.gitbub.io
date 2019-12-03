@@ -703,46 +703,87 @@ $light-pink: #d81b60;
           "mr mr mp mp"
           "mr mr mp mp"
           "ml mg mi me";
-  grid-gap: 2px;
+  grid-gap: 5px;
 }
 
 #mobileMain {
   grid-area: mm;
   background-image: url("../img/jwLogo.jpeg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: contain;
+  position: relative;
 }
-#mobileMain p{
-  bottom: 0;
-
+.title{
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  font-size: 15px;
+  font-family: 'Century Gothic', sans-serif;
+}
+.title p {
+  margin: 0;
 }
 
 #mobileAbout {
   grid-area: ma;
   height: 100%;
-
-  background: red;
+  background: #E52D27;
+  position: relative;
+  box-shadow: black 2px 2px 2px;
+}
+.aboutTitle{
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  font-size: 25px;
+  font-family: 'Century Gothic', sans-serif;
 }
 
 #mobileSkills {
   grid-area: ms;
   height: 100%;
+  background-color: #76B852;
+  position: relative;
+  box-shadow: black 2px 2px 2px;
 
-  background-color: green;
+}
+.skillsTitle{
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  font-size: 25px;
+  font-family: 'Century Gothic', sans-serif;
 }
 
 #mobileProjects {
   grid-area: mp;
   height: 100%;
+  background-color: #D58837;
+  position: relative;
+  box-shadow: black 2px 2px 2px;
 
-  background-color: orange;
 }
-
+.projectsTitle{
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  font-size: 25px;
+  font-family: 'Century Gothic', sans-serif;
+}
 #mobileResume {
   grid-area: mr;
   height: 100%;
+  background-color: #283593;
+  position: relative;
+  box-shadow: black 2px 2px 2px;
 
-  background-color: blue;
+}
+.resumeTitle{
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  font-size: 25px;
+  font-family: 'Century Gothic', sans-serif;
 }
 
 #mobileLinkedin {
@@ -750,7 +791,6 @@ $light-pink: #d81b60;
   height: 100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-
   background-image: url("../img/svg/018-linkedin.svg");
 
 }
