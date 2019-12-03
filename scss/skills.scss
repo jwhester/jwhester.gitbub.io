@@ -1,5 +1,26 @@
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
 
 $red: #fd7473;
 $yellow: #fec951;
@@ -9,23 +30,28 @@ $green: #3ACB6C;
 $orange: #FD6E00;
 $pink: #FF0080;
 
+#computer {
+  @include breakpoint(xs) {
+    display: none;
+  }
+}
 
-
-.wrapper{
+.wrapper {
   margin: 0 auto;
   width: 90%;
   margin-top: 15px;
 
 }
 
-.bar1{
+.bar1 {
   position: relative;
   width: 100%;
   height: 48px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   margin-bottom: 1.5rem;
   border-radius: 5px;
-  .bar-info{
+
+  .bar-info {
     border-radius: 5px;
     padding: 0.75rem;
     background: $red;
@@ -34,28 +60,36 @@ $pink: #FF0080;
     position: relative;
     height: 24px;
     transition: width 3.3s ease-in-out;
-    .percent{
+
+    .percent {
       float: right;
     }
-    &.html{
+
+    &.html {
       background: linear-gradient($red, red), $red;
     }
-    &.css{
+
+    &.css {
       background: linear-gradient($blue, dodgerblue), $blue;
     }
-    &.js{
+
+    &.js {
       background: linear-gradient($yellow, $orange), $yellow;
     }
-    &.ja{
+
+    &.ja {
       background: linear-gradient($purp, #BB68D0), $purp;
     }
-    &.py{
+
+    &.py {
       background: linear-gradient($green, #07B135), $green;
     }
-    &.sql{
+
+    &.sql {
       background: linear-gradient($orange, $red), $orange;
     }
-    &.ux{
+
+    &.ux {
       background: linear-gradient($pink, #BB68D0), $pink;
     }
   }
@@ -64,55 +98,49 @@ $pink: #FF0080;
 //popup
 [data-popup] {
   position: relative;
+
   &:before,
   &:after {
-    opacity: 0; transform: translate(-50%, 0);
-    transition: .15s ease opacity, .15s ease transform; will-change: opacity transform;
+    opacity: 0;
+    transform: translate(-50%, 0);
+    transition: .15s ease opacity, .15s ease transform;
+    will-change: opacity transform;
     content: "";
   }
+
   &:hover {
     &:before,
     &:after {
-      position: absolute; left: 50%;
-      transform: translate(-50%, -10px); opacity: 1;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -10px);
+      opacity: 1;
     }
+
     &:before {
       bottom: 100%;
       padding: 5px 10px;
-      background: rgba(0, 0, 0, 0.8); border-radius: 5px;
-      color: white; font-size: 12px; line-height: 12px; text-align: center;
-      content: attr(data-popup); white-space: nowrap;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 5px;
+      color: white;
+      font-size: 12px;
+      line-height: 12px;
+      text-align: center;
+      content: attr(data-popup);
+      white-space: nowrap;
     }
+
     &:after {
       top: 0;
-      height: 0; width: 0;
-      border: solid transparent; border-top-color: rgba(0, 0, 0, 0.8); border-width: 5px;
+      height: 0;
+      width: 0;
+      border: solid transparent;
+      border-top-color: rgba(0, 0, 0, 0.8);
+      border-width: 5px;
       content: "";
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
@@ -148,7 +176,7 @@ $light-pink: #d81b60;
   box-sizing: inherit;
 }
 
-.resume2{
+.resume2 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -190,25 +218,30 @@ $light-pink: #d81b60;
   position: relative;
   display: flex;
 }
+
 .resume .base,
 .resume .func {
   box-sizing: border-box;
   float: left;
 }
+
 .resume .base > div,
 .resume .func > div {
   padding-bottom: 10px;
 }
+
 .resume .base > div:last-of-type,
 .resume .func > div:last-of-type {
   padding-bottom: 0;
 }
+
 .resume .base {
   width: 30%;
   padding: 30px 15px;
   background: $darker-blue;
   color: $white;
 }
+
 .resume .base .profile {
   background: $orange;
   padding: 30px 15px 40px 15px;
@@ -216,6 +249,7 @@ $light-pink: #d81b60;
   position: relative;
   z-index: 2;
 }
+
 .resume .base .profile::after {
   content: "";
   position: absolute;
@@ -227,25 +261,30 @@ $light-pink: #d81b60;
   transform: skewY(-5deg);
   z-index: -1;
 }
+
 .resume .base .profile .photo img {
   width: 100%;
   border-radius: 50%;
 }
+
 .resume .base .profile .photo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .resume .base .profile .fa-rocket {
   font-size: 100px;
   text-align: center;
   margin: auto;
   color: $darker-blue;
 }
+
 .resume .base .profile .info {
   text-align: center;
   color: $white;
 }
+
 .resume .base .profile .info .name {
   margin-top: 10px;
   margin-bottom: 0;
@@ -253,6 +292,7 @@ $light-pink: #d81b60;
   text-transform: lowercase;
   color: $darkest-blue;
 }
+
 .resume .base .profile .info .job {
   margin-top: 10px;
   margin-bottom: 0;
@@ -260,18 +300,23 @@ $light-pink: #d81b60;
   text-transform: lowercase;
   color: $darker-blue;
 }
+
 .resume .base .contact div {
   line-height: 24px;
 }
+
 .resume .base .contact div a:hover {
   color: $yellow;
 }
+
 .resume .base .contact div a:hover span::after {
   width: 100%;
 }
+
 .resume .base .contact div:hover i {
   color: $yellow;
 }
+
 .resume .base .contact div i {
   color: $orange;
   width: 20px;
@@ -281,9 +326,11 @@ $light-pink: #d81b60;
   margin-right: 15px;
   transition-duration: 0.3s;
 }
+
 .resume .base .contact div span {
   position: relative;
 }
+
 .resume .base .contact div span::after {
   content: "";
   position: absolute;
@@ -294,22 +341,27 @@ $light-pink: #d81b60;
   left: 0;
   transition-duration: 0.3s;
 }
+
 .resume .base .follow .box {
   text-align: center;
   vertical-align: middle;
 }
+
 .resume .base .follow .box a {
   display: inline-block;
   vertical-align: text-bottom;
 }
+
 .resume .base .follow .box a:hover i {
   background: $yellow;
   border-radius: 5px;
   transform: rotate(45deg) scale(0.8);
 }
+
 .resume .base .follow .box a:hover i::before {
   transform: rotate(-45deg) scale(1.5);
 }
+
 .resume .base .follow .box i {
   display: inline-block;
   font-size: 30px;
@@ -322,29 +374,37 @@ $light-pink: #d81b60;
   margin: 0 10px 10px 10px;
   transition-duration: 0.3s;
 }
+
 .resume .base .follow .box i::before {
   transition-duration: 0.3s;
 }
+
 .resume .base .follow .box i.fa::before {
   display: block;
 }
+
 .resume .func {
   width: 100%;
   padding: 30px;
 }
+
 .resume .func:hover > div {
   transition-duration: 0.5s;
 }
+
 .resume .func:hover > div:hover h3 i {
   transform: scale(1.25);
 }
+
 .resume .func:hover > div:not(:hover) {
   opacity: 0.5;
 }
+
 .resume .func h3 {
   transition-duration: 0.3s;
   margin-top: 0;
 }
+
 .resume .func h3 i {
   color: $darker-blue;
   background: $orange;
@@ -358,18 +418,22 @@ $light-pink: #d81b60;
   margin-right: 8px;
   transition-duration: 0.3s;
 }
-.top{
+
+.top {
   display: flex;
 }
+
 .resume .func .work,
 .resume .func .edu {
   float: left;
 }
+
 .resume .func .work small,
 .resume .func .edu small {
   display: block;
   opacity: 0.7;
 }
+
 .resume .func .work ul li,
 .resume .func .edu ul li {
   position: relative;
@@ -377,14 +441,17 @@ $light-pink: #d81b60;
   padding-left: 25px;
   padding-bottom: 15px;
 }
+
 .resume .func .work ul li:hover::before,
 .resume .func .edu ul li:hover::before {
   animation: circle 1.2s infinite;
 }
+
 .resume .func .work ul li:hover span,
 .resume .func .edu ul li:hover span {
   color: $yellow;
 }
+
 @keyframes circle {
   from {
     box-shadow: 0 0 0 0px $yellow;
@@ -393,20 +460,24 @@ $light-pink: #d81b60;
     box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
   }
 }
+
 .resume .func .work ul li:first-of-type::before,
 .resume .func .edu ul li:first-of-type::before {
   width: 10px;
   height: 10px;
   left: 1px;
 }
+
 .resume .func .work ul li:last-of-type,
 .resume .func .edu ul li:last-of-type {
   padding-bottom: 3px;
 }
+
 .resume .func .work ul li:last-of-type::after,
 .resume .func .edu ul li:last-of-type::after {
   border-radius: 1.5px;
 }
+
 .resume .func .work ul li::before,
 .resume .func .work ul li::after,
 .resume .func .edu ul li::before,
@@ -415,6 +486,7 @@ $light-pink: #d81b60;
   display: block;
   position: absolute;
 }
+
 .resume .func .work ul li::before,
 .resume .func .edu ul li::before {
   width: 7px;
@@ -425,6 +497,7 @@ $light-pink: #d81b60;
   left: 3px;
   z-index: 1;
 }
+
 .resume .func .work ul li::after,
 .resume .func .edu ul li::after {
   width: 3px;
@@ -433,46 +506,56 @@ $light-pink: #d81b60;
   left: 5px;
   top: 0;
 }
+
 .resume .func .work ul li span,
 .resume .func .edu ul li span {
   transition-duration: 0.3s;
 }
+
 .resume .func .work {
   width: 48%;
   background: $darker-blue;
   padding: 15px;
   margin: 0 4% 15px 0;
 }
+
 .resume .func .edu {
   width: 48%;
   background: $darker-blue;
   padding: 15px;
 }
+
 .resume .func .skills-prog {
   clear: both;
   background: $darker-blue;
   padding: 15px;
 }
+
 .resume .func .skills-prog ul {
   margin-left: 15px;
 }
+
 .resume .func .skills-prog ul li {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
   transition-duration: 0.3s;
 }
+
 .resume .func .skills-prog ul li:hover {
   color: $yellow;
 }
+
 .resume .func .skills-prog ul li:hover .skills-bar .bar {
   background: $yellow;
   box-shadow: 0 0 0 1px $yellow;
 }
+
 .resume .func .skills-prog ul li span {
   display: block;
   width: 120px;
 }
+
 .resume .func .skills-prog ul li .skills-bar {
   background: $white;
   height: 2px;
@@ -480,6 +563,7 @@ $light-pink: #d81b60;
   position: relative;
   border-radius: 2px;
 }
+
 .resume .func .skills-prog ul li .skills-bar .bar {
   position: absolute;
   top: -1px;
@@ -488,42 +572,51 @@ $light-pink: #d81b60;
   box-shadow: 0 0 0 $orange;
   border-radius: 5px;
 }
+
 .resume .func .skills-soft {
   clear: both;
   background: $darker-blue;
   padding: 15px;
   margin: 15px 0 0;
 }
+
 .resume .func .skills-soft ul {
   display: flex;
   justify-content: space-between;
   text-align: center;
 }
+
 .resume .func .skills-soft ul li {
   position: relative;
 }
+
 .resume .func .skills-soft ul li:hover svg .cbar {
   stroke: $yellow;
   stroke-width: 4px;
 }
+
 .resume .func .skills-soft ul li:hover span,
 .resume .func .skills-soft ul li:hover small {
   transform: scale(1.2);
 }
+
 .resume .func .skills-soft ul li svg {
   width: 95%;
   fill: transparent;
   transform: rotate(-90deg);
 }
+
 .resume .func .skills-soft ul li svg circle {
   stroke-width: 1px;
   stroke: $white;
 }
+
 .resume .func .skills-soft ul li svg .cbar {
   stroke-width: 3px;
   stroke: $orange;
   stroke-linecap: round;
 }
+
 .resume .func .skills-soft ul li span,
 .resume .func .skills-soft ul li small {
   position: absolute;
@@ -532,14 +625,17 @@ $light-pink: #d81b60;
   top: 52%;
   transition-duration: 0.3s;
 }
+
 .resume .func .skills-soft ul li span {
   top: 40%;
 }
+
 .resume .func .interests {
   background: $darker-blue;
   margin: 15px 0 0;
   padding: 15px;
 }
+
 .resume .func .interests-items {
   box-sizing: border-box;
   padding: 0 0 15px;
@@ -548,6 +644,7 @@ $light-pink: #d81b60;
   display: flex;
   justify-content: space-between;
 }
+
 .resume .func .interests-items div {
   display: flex;
   flex-direction: column;
@@ -557,13 +654,16 @@ $light-pink: #d81b60;
   height: 100px;
   border-radius: 50%;
 }
+
 .resume .func .interests-items div:hover i {
   transform: scale(1.2);
 }
+
 .resume .func .interests-items div:hover span {
   color: $yellow;
   transition-duration: 0.3s;
 }
+
 .resume .func .interests-items div i {
   font-size: 45px;
   width: 60px;
@@ -572,7 +672,102 @@ $light-pink: #d81b60;
   color: $orange;
   transition-duration: 0.3s;
 }
+
 .resume .func .interests-items div span {
   display: block;
+}
+
+
+/////////Mobile//////////////////////
+#mobile {
+  display: none;
+  @include breakpoint(xs) {
+    display: block;
+  }
+}
+
+#mobileLayout {
+  background-color: white;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-areas:
+          "mm mm ma ma"
+          "mm mm ms ms"
+          "mr mr mp mp"
+          "mr mr mp mp"
+          "ml mg mi me";
+  grid-gap: 2px;
+}
+
+#mobileMain {
+  grid-area: mm;
+  background-image: url("../img/jwLogo.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#mobileAbout {
+  grid-area: ma;
+  height: 100%;
+
+  background: red;
+}
+
+#mobileSkills {
+  grid-area: ms;
+  height: 100%;
+
+  background-color: green;
+}
+
+#mobileProjects {
+  grid-area: mp;
+  height: 100%;
+
+  background-color: orange;
+}
+
+#mobileResume {
+  grid-area: mr;
+  height: 100%;
+
+  background-color: blue;
+}
+
+#mobileLinkedin {
+  grid-area: ml;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  background-image: url("../img/svg/018-linkedin.svg");
+
+}
+
+#mobileGithub {
+  grid-area: mg;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  background-image: url("../img/svg/001-github.svg");
+}
+
+#mobileInstagram {
+  grid-area: mi;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("../img/svg/instagram-logo-svg-vector-for-print.svg");
+}
+
+#mobileEmail {
+  grid-area: me;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../img/svg/008-email.svg");
 }
 

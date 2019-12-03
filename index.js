@@ -1,12 +1,85 @@
+$(document).ready(function () {
+
+    ////////////////main///////////////////////////
+    $(".trigger_popup_fricc").click(function () {
+        $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function () {
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function () {
+        $('.hover_bkgr_fricc').hide();
+    });
+
+    ////////////////////about////////////////////
+
+    $(".trigger_popup_fricc_about").click(function () {
+        $('.hover_bkgr_fricc_about').show();
+    });
+    $('.hover_bkgr_fricc_about').click(function () {
+        $('.hover_bkgr_fricc_about').hide();
+    });
+    $('.popupCloseButton').click(function () {
+        $('.hover_bkgr_fricc_about').hide();
+    });
+///////////////////////skills///////////////////////
+    $(".trigger_popup_fricc_skills").click(function () {
+        $('.hover_bkgr_fricc_skills').show();
+    });
+    $('.hover_bkgr_fricc_skills').click(function () {
+        $('.hover_bkgr_fricc_skills').hide();
+    });
+    $('.popupCloseButton').click(function () {
+        $('.hover_bkgr_fricc_skills').hide();
+    });
+
+    ////////////////////projects/////////////////
+    $(".trigger_popup_fricc_projects").click(function () {
+        $('.hover_bkgr_fricc_projects').show();
+    });
+    $('.hover_bkgr_fricc_projects').click(function () {
+        $('.hover_bkgr_fricc_projects').hide();
+    });
+    $('.popupCloseButton').click(function () {
+        $('.hover_bkgr_fricc_projects').hide();
+    });
+
+    ////////////////////resume//////////////////
+    $(".trigger_popup_fricc_resume").click(function () {
+        $('.hover_bkgr_fricc_resume').show();
+    });
+    $('.hover_bkgr_fricc_resume').click(function () {
+        $('.hover_bkgr_fricc_resume').hide();
+    });
+    $('.popupCloseButton').click(function () {
+        $('.hover_bkgr_fricc_resume').hide();
+    });
 
 
-$(document).ready(function() {
+
+    /////////////////link///////////////////////
+
+
+
+
+
+    ////////////////////git///////////////////////
+
+
+    ///////////////insta//////////////////////
+
+
+
+    ///////////////email/////////////////////
+
+
+
     function skillSet() {
         // Iterate over each element w/ a class of
         // bar-info, storing the value of data-total
         // in a variable.  Using jQuery's CSS method,
         // dynamically update the width of each bar.
-        $('.bar-info').each(function() {
+        $('.bar-info').each(function () {
             total = $(this).data("total");
             $(this).css("width", total + "%");
         });
@@ -17,7 +90,7 @@ $(document).ready(function() {
         // to implement a counter on each .percent element, which will "count"
         // up incrementally until it reaches the number inside the percent span,
         // aka it's "ceiling".
-        $('.percent').each(function() {
+        $('.percent').each(function () {
             var $this = $(this);
             $({
                 Counter: 10
@@ -26,7 +99,7 @@ $(document).ready(function() {
             }, {
                 duration: 3000,
                 easing: 'swing',
-                step: function() {
+                step: function () {
                     $this.text(Math.ceil(this.Counter) + "%");
                 }
             });
@@ -37,11 +110,10 @@ $(document).ready(function() {
     setTimeout(skillSet, 1000);
 
 
-
-    (function() {
+    (function () {
         $(".skills-prog li")
             .find(".skills-bar")
-            .each(function(i) {
+            .each(function (i) {
                 $(this)
                     .find(".bar")
                     .delay(i * 150)
@@ -54,7 +126,7 @@ $(document).ready(function() {
                         },
                         1000,
                         "linear",
-                        function() {
+                        function () {
                             return $(this).css({
                                 "transition-duration": ".5s"
                             });
@@ -64,7 +136,7 @@ $(document).ready(function() {
 
         $(".skills-soft li")
             .find("svg")
-            .each(function(i) {
+            .each(function (i) {
                 var c, cbar, circle, percent, r;
                 circle = $(this).children(".cbar");
                 r = circle.attr("r");
@@ -83,7 +155,7 @@ $(document).ready(function() {
                     },
                     1000,
                     "linear",
-                    function() {
+                    function () {
                         return circle.css({
                             "transition-duration": ".3s"
                         });
@@ -99,14 +171,13 @@ $(document).ready(function() {
                         },
                         {
                             duration: 1000,
-                            step: function(now) {
+                            step: function (now) {
                                 return $(this).text(Math.ceil(now) + "%");
                             }
                         }
                     );
             });
     }.call(this));
-
 
 
 });
