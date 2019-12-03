@@ -6,7 +6,7 @@
       @content;
     }
   } @else if $class == sm {
-    @media (min-width: 768px) {
+    @media (max-width: 991px) {
       @content;
     }
   } @else if $class == md {
@@ -31,8 +31,11 @@ $orange: #FD6E00;
 $pink: #FF0080;
 
 #computer {
-  @include breakpoint(xs) {
+  @include breakpoint(sm) {
     display: none;
+  }
+  @include breakpoint(md) {
+    display: block;
   }
 }
 
@@ -680,8 +683,10 @@ $light-pink: #d81b60;
 
 /////////Mobile//////////////////////
 #mobile {
-  display: none;
-  @include breakpoint(xs) {
+  @include breakpoint(md) {
+    display: none;
+  }
+  @include breakpoint(sm) {
     display: block;
   }
 }
@@ -706,6 +711,10 @@ $light-pink: #d81b60;
   background-image: url("../img/jwLogo.jpeg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+#mobileMain p{
+  bottom: 0;
+
 }
 
 #mobileAbout {
