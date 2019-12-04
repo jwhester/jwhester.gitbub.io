@@ -58,19 +58,20 @@ $(document).ready(function () {
 
 
     /////////////////link///////////////////////
+    $(".trigger_popup_fricc_contact").click(function () {
+        $('.hover_bkgr_fricc_contact').show();
+    });
+    $('.hover_bkgr_fricc_contact').click(function () {
+        $('.hover_bkgr_fricc_contact').hide();
+    });
+    $('.popupCloseButton').click(function () {
+        $('.hover_bkgr_fricc_contact').hide();
+    });
 
 
 
 
 
-    ////////////////////git///////////////////////
-
-
-    ///////////////insta//////////////////////
-
-
-
-    ///////////////email/////////////////////
 
 
 

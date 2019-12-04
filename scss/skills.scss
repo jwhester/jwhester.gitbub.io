@@ -692,7 +692,7 @@ $light-pink: #d81b60;
 }
 
 #mobileLayout {
-  background-color: white;
+  background: linear-gradient(#FFFFFF, #F2F2F2);
   box-sizing: border-box;
   height: 100vh;
   width: 100vw;
@@ -702,13 +702,13 @@ $light-pink: #d81b60;
           "mm mm ms ms"
           "mr mr mp mp"
           "mr mr mp mp"
-          "ml mg mi me";
+          "mc mc mc mc";
   grid-gap: 5px;
 }
 
 #mobileMain {
   grid-area: mm;
-  background-image: url("../img/jwLogo.jpeg");
+  background-image: url("../img/logo.png");
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
@@ -727,7 +727,7 @@ $light-pink: #d81b60;
 #mobileAbout {
   grid-area: ma;
   height: 100%;
-  background: #E52D27;
+  background: linear-gradient(#FF0092, #E50382);
   position: relative;
   box-shadow: black 2px 2px 2px;
 }
@@ -742,7 +742,7 @@ $light-pink: #d81b60;
 #mobileSkills {
   grid-area: ms;
   height: 100%;
-  background-color: #76B852;
+  background: linear-gradient(#B6FF00, #A3E405);
   position: relative;
   box-shadow: black 2px 2px 2px;
 
@@ -758,7 +758,7 @@ $light-pink: #d81b60;
 #mobileProjects {
   grid-area: mp;
   height: 100%;
-  background-color: #D58837;
+  background: linear-gradient(#FFCA1B, #E6B518);
   position: relative;
   box-shadow: black 2px 2px 2px;
 
@@ -773,7 +773,7 @@ $light-pink: #d81b60;
 #mobileResume {
   grid-area: mr;
   height: 100%;
-  background-color: #283593;
+  background: linear-gradient(#228DFF, #1E7FE5);
   position: relative;
   box-shadow: black 2px 2px 2px;
 
@@ -786,37 +786,17 @@ $light-pink: #d81b60;
   font-family: 'Century Gothic', sans-serif;
 }
 
-#mobileLinkedin {
-  grid-area: ml;
+#mobileContact {
+  grid-area: mc;
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-image: url("../img/svg/018-linkedin.svg");
+  background: linear-gradient(#BA00FF, #A703E5);
+  box-shadow: black 2px 2px 2px;
 
 }
-
-#mobileGithub {
-  grid-area: mg;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-
-  background-image: url("../img/svg/001-github.svg");
+.contactTitle{
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  font-size: 25px;
+  font-family: 'Century Gothic', sans-serif;
 }
-
-#mobileInstagram {
-  grid-area: mi;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-image: url("../img/svg/instagram-logo-svg-vector-for-print.svg");
-}
-
-#mobileEmail {
-  grid-area: me;
-  height: 100%;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-image: url("../img/svg/008-email.svg");
-}
-
