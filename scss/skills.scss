@@ -703,7 +703,7 @@ $light-pink: #d81b60;
           "mr mr mp mp"
           "mr mr mp mp"
           "mc mc mc mc";
-  grid-gap: 5px;
+  grid-gap: 8px;
 }
 
 #mobileMain {
@@ -730,6 +730,7 @@ $light-pink: #d81b60;
   background: linear-gradient(#FF0092, #E50382);
   position: relative;
   box-shadow: black 2px 2px 2px;
+  border-radius: 8px;
 }
 .aboutTitle{
   position: absolute;
@@ -745,6 +746,7 @@ $light-pink: #d81b60;
   background: linear-gradient(#B6FF00, #A3E405);
   position: relative;
   box-shadow: black 2px 2px 2px;
+  border-radius: 8px;
 
 }
 .skillsTitle{
@@ -761,6 +763,7 @@ $light-pink: #d81b60;
   background: linear-gradient(#FFCA1B, #E6B518);
   position: relative;
   box-shadow: black 2px 2px 2px;
+  border-radius: 8px;
 
 }
 .projectsTitle{
@@ -776,6 +779,7 @@ $light-pink: #d81b60;
   background: linear-gradient(#228DFF, #1E7FE5);
   position: relative;
   box-shadow: black 2px 2px 2px;
+  border-radius: 8px;
 
 }
 .resumeTitle{
@@ -787,10 +791,12 @@ $light-pink: #d81b60;
 }
 
 #mobileContact {
+  position: relative;
   grid-area: mc;
   height: 100%;
   background: linear-gradient(#BA00FF, #A703E5);
   box-shadow: black 2px 2px 2px;
+  border-radius: 8px;
 
 }
 .contactTitle{
