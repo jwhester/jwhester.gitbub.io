@@ -107,7 +107,7 @@ $pink: #FF0080;
     opacity: 0;
     transform: translate(-50%, 0);
     transition: .15s ease opacity, .15s ease transform;
-    will-change: opacity transform;
+    will-change: opacitytransform;
     content: "";
   }
 
@@ -698,11 +698,15 @@ $light-pink: #d81b60;
   width: 100vw;
   display: grid;
   grid-template-areas:
-          "mm mm ma ma"
-          "mm mm ms ms"
-          "mr mr mp mp"
-          "mr mr mp mp"
-          "mc mc mc mc";
+          ". . . . . ."
+          ". mm mm ma ma ."
+          ". mm mm ms ms ."
+          ". mr mr mp mp ."
+          ". mr mr mp mp ."
+          ". mc mc mc mc ."
+          ". . . . . .";
+  grid-template-columns: .1fr 1fr 1fr 1fr 1fr .1fr;
+  grid-template-rows: .1fr 1fr 1fr 1fr 1fr 1fr .1fr;
   grid-gap: 8px;
 }
 
@@ -712,6 +716,7 @@ $light-pink: #d81b60;
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
+
 }
 .title{
   position: absolute;

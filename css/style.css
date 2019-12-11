@@ -32,7 +32,6 @@ html {
     width: 100vw;
     height: 100%;
     background-color: black;
-    color: white;
     flex: 0 0 auto;
     display: grid;
     grid-template-columns: 66% 34%;
@@ -44,9 +43,12 @@ html {
     display: grid;
     grid-template-rows: 63% 5% 2% 30%;
     grid-template-columns: 5% 95%;
-    grid-template-areas: ". ." ". h2" ". h1" ". .";
+    grid-template-areas:
+            ". ."
+            ". h2"
+            ". h1"
+            ". h3";
     grid-area: 1 / 1 / 2 / 2;
-    background-image: url("../img/jwLogo.jpeg");
 
     /* Full height */
     height: 100%;
@@ -64,8 +66,13 @@ html {
     font-size: 50px;
     font-family: 'PT Serif', serif;
     grid-area: h2;
-    margin: 5px 10px;
-
+    margin: 0 10px;
+    color: black;
+    text-shadow:
+            -1px -1px 0 #fff,
+            1px -1px 0 #fff,
+            -1px 1px 0 #fff,
+            1px 1px 0 #fff;
 }
 
 .home1 h1 {
@@ -73,19 +80,37 @@ html {
     font-family: 'Century Gothic', sans-serif;
     grid-area: h1;
     margin: 0;
+    color: black;
+    text-shadow:
+            -2px -2px 0 #fff,
+            2px -2px 0 #fff,
+            -2px 2px 0 #fff,
+            2px 2px 0 #fff;
 
 }
 
 .home2 {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     grid-area: 1 / 2 / 2 / 3;
-    background-image: linear-gradient(#716A6B, black);
+    background-image: url("../img/jwLogo.jpeg");
+    background-color: white;
+    background-repeat: no-repeat;
+    /*background-size: contain;*/
+    background-position: center;
     border: whitesmoke solid 4px;
     font-family: 'Century Gothic', sans-serif;
     font-size: 25px;
 
+}
+.home1 h3{
+    grid-area: h3;
+    color: white;
+    font-size: 65px;
+    margin-top: 120px;
+    font-family: 'Century Gothic', sans-serif;
 
 }
 
@@ -97,7 +122,7 @@ html {
 .about {
     width: 100vw;
     height: 100%;
-    background-image: linear-gradient(#E52D27, #B31217);
+    background: #4BA8B2;
     color: white;
     flex: 0 0 auto;
     display: grid;
@@ -108,22 +133,20 @@ html {
 .about1 {
     grid-area: 1 / 1 / 2 / 2;
     background-image: url("../img/aboutMe.png");
-
     /* Full height */
     height: 100%;
-
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     border: whitesmoke solid 4px;
 
 }
 
 .about2 {
     grid-area: 1 / 2 / 2 / 3;
-    background-image: linear-gradient(#E52D27, #B31217);
+    background: #4BA8B2;
     border: whitesmoke solid 4px;
     font-family: 'Century Gothic', sans-serif;
 
@@ -141,7 +164,7 @@ table, th, td {
 .skills {
     width: 100vw;
     height: 100%;
-    background-color: #76B852;
+    background: #727980;
     color: white;
     flex: 0 0 auto;
     display: grid;
@@ -166,7 +189,7 @@ table, th, td {
 
 .skills2 {
     grid-area: 1 / 2 / 2 / 3;
-    background-image: linear-gradient(#8DC26F, #76B852);
+    background: #727980;
     border: whitesmoke solid 4px;
     font-family: 'Century Gothic', sans-serif;
 
@@ -181,7 +204,7 @@ table, th, td {
 .projects {
     width: 100vw;
     height: 100%;
-    color: white;
+    color: black;
     flex: 0 0 auto;
     display: grid;
     grid-template-columns: 60% 40%;
@@ -205,7 +228,7 @@ table, th, td {
 
 .projects2 {
     grid-area: 1 / 2 / 2 / 3;
-    background-image: linear-gradient(#D58837, #D07B21);
+    background: #EDEFE2;
     border: whitesmoke solid 4px;
     font-family: 'Century Gothic', sans-serif;
     overflow: scroll;
@@ -233,7 +256,7 @@ table, th, td {
     border: 2px solid white;
     box-shadow: black 2px 2px 2px;
     margin: 5%;
-    background-color: #D07B21;
+    background-color: white;
 
 }
 #milHub {
@@ -257,7 +280,7 @@ table, th, td {
     grid-area: card2;
     border: 2px solid white;
     box-shadow: black 2px 2px 2px;
-    background-color: #D58837;
+    background-color: floralwhite;
 
 }
 #lofiWeather {
@@ -271,7 +294,7 @@ table, th, td {
     border: 2px solid white;
     box-shadow: black 2px 2px 2px;
     margin: 5%;
-    background-color: #D07B21;
+    background-color: white;
 
 }
 #candyMonster {
@@ -293,7 +316,7 @@ table, th, td {
 .resumeBlock {
     width: 100vw;
     height: 100%;
-    background-image: linear-gradient(#283593, #1A237E);
+    background: #283593;
     color: white;
     flex: 0 0 auto;
     display: grid;
@@ -341,14 +364,6 @@ table, th, td {
 
 }
 
-/*#footer_contents {*/
-/*    color: whitesmoke;*/
-/*    height: 24px;*/
-/*    width: 1000px;*/
-/*    margin: auto;*/
-
-/*}*/
-
 
 
 #timeline-wrap {
@@ -369,7 +384,7 @@ table, th, td {
 
 .marker {
     z-index: 1000;
-    color: #FFF;
+    color: black;
     width: 60px;
     height: 60px;
     line-height: 50px;
@@ -381,6 +396,7 @@ table, th, td {
     box-shadow: black 2px 2px 2px;
     font-size: 11px;
     font-family: 'Century Gothic', sans-serif;
+    font-weight: bold;
 }
 
 .marker:hover {
@@ -394,6 +410,7 @@ table, th, td {
     -ms-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
+    color: transparent;
 }
 
 
@@ -402,31 +419,31 @@ table, th, td {
 }
 
 .timeline-icon.two {
-    background-color: #E52D27 !important;
+    background: #4BA8B2;
 }
 
 .timeline-icon.three {
-    background-color: #8DC26F !important;
+    background: #717980;
 }
 
 .timeline-icon.four {
-    background-color: #D07B21 !important;
+    background: #EDEFE1;
 }
 
 .timeline-icon.five {
-    background-color: #1A237E !important;
+    background: #283593;
 }
 
 .timeline-icon.six {
-    background-color: dodgerblue !important;
+    /*background: linear-gradient(#BA00FF, #A703E5);*/
 }
 
 .timeline-icon.seven {
-    background-color: thistle !important;
+    background: linear-gradient(#BA00FF, #A703E5);
 }
 
 .timeline-icon.eight {
-    background-color: red !important;
+    background: linear-gradient(#BA00FF, #A703E5);
 }
 
 
@@ -446,7 +463,7 @@ table, th, td {
 }
 
 .m2:hover {
-    background-image: url("../img/fighting.jpg") !important;
+    background-image: url("../img/47582357_936147519916018_2350931743390826496_n.jpg") !important;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -609,7 +626,7 @@ polyline {
     /**
      * Dark Arrow Down
      */
-    background-image: url("../public/img/svg/023-down-arrow.svg");
+    background-image: url("../img/svg/023-down-arrow.svg");
     background-size: contain;
 }
 
