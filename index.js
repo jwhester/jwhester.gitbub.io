@@ -1,186 +1,209 @@
-$(document).ready(function () {
-
-    ////////////////main///////////////////////////
-    $(".trigger_popup_fricc").click(function () {
-        $('.hover_bkgr_fricc').show();
-    });
-    $('.hover_bkgr_fricc').click(function () {
-        $('.hover_bkgr_fricc').hide();
-    });
-    $('.popupCloseButton').click(function () {
-        $('.hover_bkgr_fricc').hide();
-    });
-
-    ////////////////////about////////////////////
-
-    $(".trigger_popup_fricc_about").click(function () {
-        $('.hover_bkgr_fricc_about').show();
-    });
-    $('.hover_bkgr_fricc_about').click(function () {
-        $('.hover_bkgr_fricc_about').hide();
-    });
-    $('.popupCloseButton').click(function () {
-        $('.hover_bkgr_fricc_about').hide();
-    });
-///////////////////////skills///////////////////////
-    $(".trigger_popup_fricc_skills").click(function () {
-        $('.hover_bkgr_fricc_skills').show();
-    });
-    $('.hover_bkgr_fricc_skills').click(function () {
-        $('.hover_bkgr_fricc_skills').hide();
-    });
-    $('.popupCloseButton').click(function () {
-        $('.hover_bkgr_fricc_skills').hide();
-    });
-
-    ////////////////////projects/////////////////
-    $(".trigger_popup_fricc_projects").click(function () {
-        $('.hover_bkgr_fricc_projects').show();
-    });
-    $('.hover_bkgr_fricc_projects').click(function () {
-        $('.hover_bkgr_fricc_projects').hide();
-    });
-    $('.popupCloseButton').click(function () {
-        $('.hover_bkgr_fricc_projects').hide();
-    });
-
-    ////////////////////resume//////////////////
-    $(".trigger_popup_fricc_resume").click(function () {
-        $('.hover_bkgr_fricc_resume').show();
-    });
-    $('.hover_bkgr_fricc_resume').click(function () {
-        $('.hover_bkgr_fricc_resume').hide();
-    });
-    $('.popupCloseButton').click(function () {
-        $('.hover_bkgr_fricc_resume').hide();
-    });
-
-
-
-    /////////////////link///////////////////////
-    $(".trigger_popup_fricc_contact").click(function () {
-        $('.hover_bkgr_fricc_contact').show();
-    });
-    $('.hover_bkgr_fricc_contact').click(function () {
-        $('.hover_bkgr_fricc_contact').hide();
-    });
-    $('.popupCloseButton').click(function () {
-        $('.hover_bkgr_fricc_contact').hide();
-    });
-
-
-
-
-
-
-
-
-    function skillSet() {
-        // Iterate over each element w/ a class of
-        // bar-info, storing the value of data-total
-        // in a variable.  Using jQuery's CSS method,
-        // dynamically update the width of each bar.
-        $('.bar-info').each(function () {
-            total = $(this).data("total");
-            $(this).css("width", total + "%");
-        });
-
-        // Iterate over each element w/ the class percent.  Using
-        // jQuery's $(this) will allow us to interact w/ each specific
-        // object in the loop.  Then use jQuery's super awesome animate method
-        // to implement a counter on each .percent element, which will "count"
-        // up incrementally until it reaches the number inside the percent span,
-        // aka it's "ceiling".
-        $('.percent').each(function () {
-            var $this = $(this);
-            $({
-                Counter: 10
-            }).animate({
-                Counter: $this.text()
-            }, {
-                duration: 3000,
-                easing: 'swing',
-                step: function () {
-                    $this.text(Math.ceil(this.Counter) + "%");
-                }
-            });
-        });
-    };
-    // Invoke our skillSet function inside a setTimeout,
-    // to create a short delay before the animation begins.
-    setTimeout(skillSet, 1000);
-
-
-    (function () {
-        $(".skills-prog li")
-            .find(".skills-bar")
-            .each(function (i) {
-                $(this)
-                    .find(".bar")
-                    .delay(i * 150)
-                    .animate(
-                        {
-                            width:
-                                $(this)
-                                    .parents()
-                                    .attr("data-percent") + "%"
-                        },
-                        1000,
-                        "linear",
-                        function () {
-                            return $(this).css({
-                                "transition-duration": ".5s"
-                            });
-                        }
-                    );
-            });
-
-        $(".skills-soft li")
-            .find("svg")
-            .each(function (i) {
-                var c, cbar, circle, percent, r;
-                circle = $(this).children(".cbar");
-                r = circle.attr("r");
-                c = Math.PI * (r * 2);
-                percent = $(this)
-                    .parent()
-                    .data("percent");
-                cbar = (100 - percent) / 100 * c;
-                circle.css({
-                    "stroke-dashoffset": c,
-                    "stroke-dasharray": c
-                });
-                circle.delay(i * 150).animate(
-                    {
-                        strokeDashoffset: cbar
-                    },
-                    1000,
-                    "linear",
-                    function () {
-                        return circle.css({
-                            "transition-duration": ".3s"
-                        });
-                    }
-                );
-                $(this)
-                    .siblings("small")
-                    .prop("Counter", 0)
-                    .delay(i * 150)
-                    .animate(
-                        {
-                            Counter: percent
-                        },
-                        {
-                            duration: 1000,
-                            step: function (now) {
-                                return $(this).text(Math.ceil(now) + "%");
-                            }
-                        }
-                    );
-            });
-    }.call(this));
-
-
+//-------------------------------------------//
+//-----------------MAIN-------------------//
+//-------------------------------------------//
+$("#logo").click(function () {
+    $("#main").html(
+        '<div class="mainpic">' +
+        '<h1 class="title">I\'m J.W. Hester, a <br> designer and <br>software developer<br>based in San Antonio.</h1>\n' +
+        '</div>'
+    )
 });
+//-------------------------------------------//
+//-----------------ABOUT-------------------//
+//-------------------------------------------//
+$("#about").click(function () {
+    $("#main").html(
+        "<div class='about'>" +
+        "<div class='airforce'></div>" +
+        "<div class='hike'></div>" +
+        "<div class='disney'></div>" +
+        "<div class='fight'></div>" +
+        "</div>"
+    );
+    $(".airforce").mouseenter(function () {
+        $(this).html(
+            '<p>Air Force Veteran</p>'
+        )
+    }).mouseleave(function () {
+        $(this).html("")
+    });
+    $(".hike").mouseenter(function () {
+        $(this).html(
+            '<p>I love hiking!</p>'
+        )
+    }).mouseleave(function () {
+        $(this).html("")
+    });
+    $(".disney").mouseenter(function () {
+        $(this).html(
+            '<p>Disney World with my family</p>'
+        )
+    }).mouseleave(function () {
+        $(this).html("")
+    });
+    $(".fight").mouseenter(function () {
+        $(this).html(
+            '<p>I\'m an amateur Muay Thai fighter.</p>'
+        )
+    }).mouseleave(function () {
+        $(this).html("")
+    });
+});
+//-------------------------------------------//
+//-----------------PORTFOLIO-------------------//
+//-------------------------------------------//
+$("#portfolio").click(function () {
+    $("#main").html(
+        "<div id='portfolioMain'> " +
+        "<div class='project' id='candyMonster'>" +
+        "<img src='img/portfolio/candyMonster.png' alt=''>" +
+        "</div>" +
+        "<div class='project' id='lofiWeatherMap'>" +
+        "<img src='img/portfolio/lofi.png' alt=''>" +
+        "</div>" +
+        "<div class='project' id='milHub'>" +
+        "<img src='img/portfolio/milHub.png' alt=''>" +
+        "</div>" +
+        "<div class='project' id='socialApe'>" +
+        "<img src='img/portfolio/ape.png' alt=''>" +
+        "</div>" +
+        "<div class='project' id='spaceBountyHunter'>" +
+        "<img src='img/portfolio/bountyhunter.png' alt=''>" +
+        "</div>" +
+        "<div class='project' id='designPortfolio'></div>" +
+        "<div class='project' id='adlister'></div>" +
+        "<div class='project' id='capstone'></div>" +
+        "</div>"
+    );
+    $("#candyMonster").fadeIn( "slow" ).click(function () {
+        $(this).fadeOut("slow");
+        $("#lofiWeatherMap").fadeIn( "slow" );
+    });
+    $("#lofiWeatherMap").click(function () {
+        $(this).fadeOut("slow");
+        $("#milHub").fadeIn( "slow" );
+    });
+    $("#milHub").click(function () {
+        $(this).fadeOut("slow");
+        $("#socialApe").fadeIn( "slow" );
+    });
+    $("#socialApe").click(function () {
+        $(this).fadeOut("slow");
+        $("#spaceBountyHunter").fadeIn( "slow" );
+    });
+    $("#spaceBountyHunter").click(function () {
+        $(this).fadeOut("slow");
+        $("#designPortfolio").fadeIn( "slow" );
+    });
+    $("#designPortfolio").click(function () {
+        $(this).fadeOut("slow");
+        $("#adlister").fadeIn( "slow" );
+    });
+    $("#adlister").click(function () {
+        $(this).fadeOut("slow");
+        $("#capstone").fadeIn( "slow" );
+    });
+    $("#capstone").click(function () {
+        $(this).fadeOut("slow");
+        $("#candyMonster").fadeIn( "slow" );
+    });
+
+//    carousel of images to scroll through for my portfolio at the top of the screen
+//    click on image and it populates the bottom section with information
+});
+//-------------------------------------------//
+//-----------------SKILLS-------------------//
+//-------------------------------------------//$("#skills").click(function () {
+$("#skills").click(function () {
+    $("#main").html(
+        '<div style="position: relative; margin: 40%">' +
+        '<div class="text">' +
+        '<p>I\'m fluent in</p>' +
+        '<p>' +
+        '<span class="word wisteria">HTML</span>' +
+        '<span class="word belize">CSS</span>' +
+        '<span class="word pomegranate">JavaScript</span>' +
+        '<span class="word green">jQuery</span>' +
+        '<span class="word midnight">Java</span>' +
+        '<span class="word blue">MySQL</span>' +
+        '</p>' +
+
+        '</div>' +
+        '</div>'
+    );
+
+let words = document.getElementsByClassName('word');
+let wordArray = [];
+let currentWord = 0;
+
+words[currentWord].style.opacity = 1;
+for (let i = 0; i < words.length; i++) {
+    splitLetters(words[i]);
+}
+
+function changeWord() {
+    let cw = wordArray[currentWord];
+    let nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
+    for (let i = 0; i < cw.length; i++) {
+        animateLetterOut(cw, i);
+    }
+
+    for (let i = 0; i < nw.length; i++) {
+        nw[i].className = 'letter behind';
+        nw[0].parentElement.style.opacity = 1;
+        animateLetterIn(nw, i);
+    }
+
+    currentWord = (currentWord == wordArray.length - 1) ? 0 : currentWord + 1;
+}
+
+function animateLetterOut(cw, i) {
+    setTimeout(function () {
+        cw[i].className = 'letter out';
+    }, i * 120);
+}
+
+function animateLetterIn(nw, i) {
+    setTimeout(function () {
+        nw[i].className = 'letter in';
+    }, 340 + (i * 120));
+}
+
+function splitLetters(word) {
+    let content = word.innerHTML;
+    word.innerHTML = '';
+    let letters = [];
+    for (let i = 0; i < content.length; i++) {
+        let letter = document.createElement('span');
+        letter.className = 'letter';
+        letter.innerHTML = content.charAt(i);
+        word.appendChild(letter);
+        letters.push(letter);
+    }
+
+    wordArray.push(letters);
+}
+
+changeWord();
+setInterval(changeWord, 3000);
+});
+
+//-------------------------------------------//
+//-----------------RESUME-------------------//
+//-------------------------------------------//
+$("#resume").click(function () {
+    $("#main").html(
+        "<div class='resume'>" +
+        "<img class='resumepic' src='img/resume.png' alt=''>" +
+        "</div>"
+    );
+});
+//-------------------------------------------//
+//-----------------CONTACT-------------------//
+//-------------------------------------------//
+$("#contact").click(function () {
+});
+
+
 
 

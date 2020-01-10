@@ -1,0 +1,266 @@
+body{
+    margin: 0;
+    display: flex;
+    background-color: white;
+}
+#nav{
+    height: 100vh;
+    width: 30vw;
+    text-align: center;
+    background-color: #1B1B1B;
+    color: white;
+    max-height: 100vh;
+
+}
+
+.link{
+    transition: 0.3s ease;
+    border-top: 4px solid #1B1B1B;
+    border-bottom: 4px solid #1B1B1B;
+    margin: 0 20px;
+    padding: 5px 0;
+    font-size: 25px;
+    font-family: 'Roboto Slab', serif;
+
+}
+.link:hover{
+    transition: .5s;
+    border-top: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+    padding: 15px 0;
+    font-size: 35px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+
+
+#main{
+    height: 100vh;
+    width: 70vw;
+    max-height: 100vh;
+
+}
+
+.mainpic{
+    height: 100vh;
+    background-image: url("img/me.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media only screen and (max-width: 850px) {
+    .mainpic {
+        height: 100vh;
+        background-image: url("img/meTall.jpeg");
+        background-size: 100vh;
+        background-repeat: no-repeat;
+    }
+    .title{
+        position: absolute;
+        top: 0;
+        font-family: 'Roboto Slab', serif;
+        margin-left: 10px;
+        font-size: 30px !important;
+
+    }
+}
+.title{
+    position: absolute;
+    top: 0;
+    margin-left: 10px;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Roboto Slab', serif;
+
+}
+.title span{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+
+
+/*--------ABOUT----------*/
+.about{
+    margin: 10px;
+    display: grid;
+    text-align: center;
+    grid-template-areas:
+            "pic1 pic2 pic3"
+            "pic4 pic4 pic4";
+    grid-gap: 10px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+.about p {
+    margin-top: 30%;
+    background: rgba(0, 0, 0, 0.6);
+
+}
+.fight p {
+    margin-top: 10%;
+}
+.airforce{
+
+    grid-area: pic1;
+    background-image: url("img/about/airforce.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:500px;
+    /*width: 350px;*/
+    background-position: center;
+
+}
+.airforce:hover{
+    transition: .3s ease-in-out;
+    opacity: 0.4;
+
+}
+
+.hike{
+    grid-area: pic2;
+    background-image: url("img/about/hiking.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:500px;
+    /*width: 350px;*/
+    background-position: center;
+
+}
+.hike:hover{
+    transition: .3s ease-in-out;
+    opacity: 0.4;
+}
+.disney{
+    grid-area: pic3;
+    background-image: url("img/about/disney.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:500px;
+    /*width: 350px;*/
+    background-position: center;
+}
+.disney:hover{
+    transition: .3s ease-in-out;
+    opacity: 0.4;
+}
+.fight{
+    grid-area: pic4;
+    color: white;
+    background-image: url("img/about/fighting.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    background-position: center;
+}
+.fight:hover{
+    transition: .3s ease-in-out;
+    opacity: 0.4;
+}
+
+/*--------portfolio----------*/
+#portfolioMain{
+    height: 100vh;
+}
+
+.project{
+    display: none;
+    background-size: cover;
+    height: 100vh;
+}
+.project img {
+    height: 50%;
+    width: 100%;
+}
+
+/*-------skills--------*/
+.text {
+    position: absolute;
+    width: 450px;
+    left: 50%;
+    margin-left: -225px;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+    font-size: 50px;
+}
+
+.text p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+.word {
+    margin-top: 10px;
+    position: absolute;
+    width: 220px;
+    opacity: 0;
+    margin-left: 10px;
+    font-size: 45px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.letter {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+    color: #8e44ad;
+}
+
+.belize {
+    color: #2980b9;
+}
+
+.pomegranate {
+    color: #c0392b;
+}
+
+.green {
+    color: #16a085;
+}
+
+.midnight {
+    color: #2c3e50;
+}
+.blue {
+    color: dodgerblue;
+}
+
+/*-------resume-------*/
+.resume{
+    max-height: 100vh;
+    overflow: scroll;
+}
+.resumepic{
+    width: 100%;
+}
+@media only screen and (max-width: 850px) {
+    .resumepic{
+        height: 100vh;
+    }
+}
+
