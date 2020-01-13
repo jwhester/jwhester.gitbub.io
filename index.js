@@ -205,13 +205,13 @@ $("#contact").click(function () {
     $('#main').html(
         '<ul>' +
         '<li>' +
-        '<a href="#"><i class="far fa-envelope icon"></i></a>' +
+        '<a href="#"><img src="img/svg/005-envelope.svg" alt="" class="icon email"></a>' +
         '</li>' +
         '<li>' +
-        '<a href=""><i class="fab fa-linkedin-in icon"></i></a>' +
+        '<a href=""><img src="img/svg/iconmonstr-linkedin-1.svg" alt="" class="icon linkedin"></a>' +
         '</li>' +
         '<li>' +
-        '<a href="#"><i class="fab fa-github icon"></i></a></li>' +
+        '<a href="#"><img src="img/svg/002-github-1.svg" alt="" class="icon github"></a></li>' +
         '</ul>'
     )
 
