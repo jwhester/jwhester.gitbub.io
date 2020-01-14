@@ -4,7 +4,7 @@
 $("#logo").click(function () {
     $("#main").html(
         '<div class="mainpic">' +
-        '<h1 class="title">I\'m J.W. Hester, a <br> designer and <br>software developer<br>based in San Antonio.</h1>\n' +
+        '<h1 class="title"><span>I\'m J.W. Hester,</span> <span>a designer and software developer</span><span>based in San Antonio, Texas.</span></h1>\n' +
         '</div>'
     )
 });
@@ -57,22 +57,151 @@ $("#portfolio").click(function () {
         "<div id='portfolioMain'> " +
         "<div class='project' id='candyMonster'>" +
         "<img src='img/portfolio/candyMonster.png' alt=''>" +
+        "<div class='circleContainer'> " +
+        "<div class='circle active'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "</div>" +
+        "<h1>Candy Monster</h1>" +
+        "<div class='content'>" +
+        "<p>A choose your own adventure game with a Halloween theme.</p>" +
+        "<img class='picture' src='img/portfolio/candy.png' alt=''>" +
+        "</div>" +
         "</div>" +
         "<div class='project' id='lofiWeatherMap'>" +
         "<img src='img/portfolio/lofi.png' alt=''>" +
+        "<div class='circleContainer'>" +
+        "<div class='circle'></div>" +
+        "<div class='circle active'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "</div>" +
+        "<h1>Lofi Weather Map</h1>" +
+        "<div class='content'>" +
+        "<p>Weather Map is a Javascript driven application\n" +
+        "that forecast the weather anywhere in the\n" +
+        "world in a 3 day format(Current day and the\n" +
+        "two days preceding) With the use of Jquery\n" +
+        "getting request from Dark Sky Api and Mapbox\n" +
+        "Api we are able to get both Databases\n" +
+        "to asynchronously get information to display\n" +
+        "realtime information to users.</p>" +
+        "<img class='picture' src='img/portfolio/map.png' alt=''>" +
+        "</div>" +
         "</div>" +
         "<div class='project' id='milHub'>" +
         "<img src='img/portfolio/milHub.png' alt=''>" +
+        "<div class='circleContainer'>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle active'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "</div>" +
+        "<h1>Milhub</h1>" +
+        "<div class='content'>" +
+        "<p>3rd place winner and crowd favorite at Geekdoms Veteran Code-a-thon. Milhub is a search engine where companies that are military and GI Bill friendly can advertise themselves and members can leave reviews for future users. </p>" +
+        "<img class='picture' src='img/portfolio/milhubschools.png' alt=''>" +
+        "</div>" +
         "</div>" +
         "<div class='project' id='socialApe'>" +
         "<img src='img/portfolio/ape.png' alt=''>" +
+        "<div class='circleContainer'>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle active'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "</div>" +
+        "<h1>Social Ape</h1>" +
+        "<div class='content'>" +
+        "<p>Created a full stack, fully-featured social media application using React, Firebase, Redux, Express, and Material-UI. During this solo project I learned how to create a backend REST API server with Node.js and Express, user login and authentication, image uploads, notifications, cloud functions, and deploying to Firebase.</p>" +
+        "<img src='' alt=''>" +
+        "</div>" +
         "</div>" +
         "<div class='project' id='spaceBountyHunter'>" +
         "<img src='img/portfolio/bountyhunter.png' alt=''>" +
+        "<div class='circleContainer'>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle active'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
         "</div>" +
-        "<div class='project' id='designPortfolio'></div>" +
-        "<div class='project' id='adlister'></div>" +
-        "<div class='project' id='capstone'></div>" +
+        "<h1>Space Bounty Hunter</h1>" +
+        "<div class='content'>" +
+        "<p>A space themed RPG reminiscent of the old school RPG's.</p>" +
+        "<img class='picture' src='img/portfolio/sbh.png' alt=''>" +
+        "</div>" +
+        "</div>" +
+        "<div class='project' id='designPortfolio'>" +
+        "<img src='img/logo.png' alt=''>" +
+        "<div class='circleContainer'>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle active'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "</div>" +
+        "<h1>Design Projects</h1>" +
+        "<div class='content'>" +
+        "<img src='' alt=''>" +
+        "</div>" +
+        "</div>" +
+        "<div class='project' id='adlister'>" +
+        "<img src='img/logo.png' alt=''>" +
+        "<div class='circleContainer'>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle active'></div>" +
+        "<div class='circle'></div>" +
+        "</div>" +
+        "<h1>Ad Lister</h1>" +
+        "<div class='content'>" +
+        "<img src='' alt=''>" +
+        "</div>" +
+        "</div>" +
+        "<div class='project' id='capstone'>" +
+        "<img src='img/logo.png' alt=''>" +
+        "<div class='circleContainer'>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle'></div>" +
+        "<div class='circle active'></div>" +
+        "</div>" +
+        "<h1>Capstone</h1>" +
+        "<div class='content'>" +
+        "<img src='' alt=''>" +
+        "</div>" +
         "</div>"
     );
     $("#candyMonster").fadeIn("slow").click(function () {
@@ -185,7 +314,7 @@ $("#skills").click(function () {
     }
 
     changeWord();
-    setInterval(changeWord, 3000);
+    setInterval(changeWord, 2000);
 });
 
 //-------------------------------------------//
@@ -203,15 +332,16 @@ $("#resume").click(function () {
 //-------------------------------------------//
 $("#contact").click(function () {
     $('#main').html(
+        '<h1 class="contact" data-text="Contact Me:">Contact Me:</h1>' +
         '<ul>' +
         '<li>' +
-        '<a href="#"><img src="img/svg/005-envelope.svg" alt="" class="icon email"></a>' +
+        '<a href="mailto:jameshester88@gmail.com" target="_blank"><img src="img/svg/005-envelope.svg" alt="" class="icon email"></a>' +
         '</li>' +
         '<li>' +
-        '<a href=""><img src="img/svg/iconmonstr-linkedin-1.svg" alt="" class="icon linkedin"></a>' +
+        '<a href="https://www.linkedin.com/in/jw-hester/" target="_blank"><img src="img/svg/iconmonstr-linkedin-1.svg" alt="" class="icon linkedin"></a>' +
         '</li>' +
         '<li>' +
-        '<a href="#"><img src="img/svg/002-github-1.svg" alt="" class="icon github"></a></li>' +
+        '<a href="https://github.com/jwhester" target="_blank"><img src="img/svg/002-github-1.svg" alt="" class="icon github"></a></li>' +
         '</ul>'
     )
 
