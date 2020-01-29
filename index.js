@@ -119,7 +119,7 @@ $("#portfolio").click(function () {
         "<h1>Milhub</h1>" +
         "<div class='content'>" +
         "<p>3rd place winner and crowd favorite at Geekdoms Veteran Code-a-thon. Milhub is a search engine where companies that are military and GI Bill friendly can advertise themselves and members can leave reviews for future users. </p>" +
-        "<img class='picture' src='img/portfolio/milhubschools.png' alt=''>" +
+        "<video class='picture' controls='controls'  src='img/portfolio/milhubClip.mov'></video>" +
         "</div>" +
         "</div>" +
         "<div class='project' id='socialApe'>" +
