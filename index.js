@@ -58,6 +58,7 @@ $("#portfolio").click(function () {
         "<div class='project' id='candyMonster'>" +
         "<img src='img/portfolio/candyMonster.png' alt=''>" +
         "<div class='circleContainer'> " +
+        "<img src='img/portfolio/024-left-arrow.svg' alt='' id='candyMonster-capstone' class='arrow'> " +
         "<div class='circle active'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
@@ -66,16 +67,18 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
+        "<img src='img/portfolio/025-right-arrow.svg' alt='' id='candyMonster-lofiWeatherMap' class='arrow'> " +
         "</div>" +
         "<h1>Candy Monster</h1>" +
         "<div class='content'>" +
         "<p>A choose your own adventure game with a Halloween theme.</p>" +
-        "<img class='picture' src='img/portfolio/candy.png' alt=''>" +
+        "<video class='picture' controls='controls'  src='img/portfolio/candyMonsterClip.mov'></video>" +
         "</div>" +
         "</div>" +
         "<div class='project' id='lofiWeatherMap'>" +
         "<img src='img/portfolio/lofi.png' alt=''>" +
         "<div class='circleContainer'>" +
+        "<img src='img/portfolio/024-left-arrow.svg' alt='' id='lofiWeatherMap-candyMonster' class='arrow'> " +
         "<div class='circle'></div>" +
         "<div class='circle active'></div>" +
         "<div class='circle'></div>" +
@@ -84,6 +87,7 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
+        "<img src='img/portfolio/025-right-arrow.svg' alt='' id='lofiWeatherMap-milHub' class='arrow'> " +
         "</div>" +
         "<h1>Lofi Weather Map</h1>" +
         "<div class='content'>" +
@@ -101,6 +105,7 @@ $("#portfolio").click(function () {
         "<div class='project' id='milHub'>" +
         "<img src='img/portfolio/milHub.png' alt=''>" +
         "<div class='circleContainer'>" +
+        "<img src='img/portfolio/024-left-arrow.svg' alt='' id='milHub-lofiWeatherMap' class='arrow'> " +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle active'></div>" +
@@ -109,6 +114,7 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
+        "<img src='img/portfolio/025-right-arrow.svg' alt='' id='milHub-socialApe' class='arrow'> " +
         "</div>" +
         "<h1>Milhub</h1>" +
         "<div class='content'>" +
@@ -119,6 +125,7 @@ $("#portfolio").click(function () {
         "<div class='project' id='socialApe'>" +
         "<img src='img/portfolio/ape.png' alt=''>" +
         "<div class='circleContainer'>" +
+        "<img src='img/portfolio/024-left-arrow.svg' alt='' id='socialApe-milHub' class='arrow'> " +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
@@ -127,6 +134,7 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
+        "<img src='img/portfolio/025-right-arrow.svg' alt='' id='socialApe-spaceBountyHunter' class='arrow'> " +
         "</div>" +
         "<h1>Social Ape</h1>" +
         "<div class='content'>" +
@@ -137,6 +145,7 @@ $("#portfolio").click(function () {
         "<div class='project' id='spaceBountyHunter'>" +
         "<img src='img/portfolio/bountyhunter.png' alt=''>" +
         "<div class='circleContainer'>" +
+        "<img src='img/portfolio/024-left-arrow.svg' alt='' id='spaceBountyHunter-socialApe' class='arrow'> " +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
@@ -145,6 +154,7 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
+        "<img src='img/portfolio/025-right-arrow.svg' alt='' id='spaceBountyHunter-designPortfolio' class='arrow'> " +
         "</div>" +
         "<h1>Space Bounty Hunter</h1>" +
         "<div class='content'>" +
@@ -155,6 +165,7 @@ $("#portfolio").click(function () {
         "<div class='project' id='designPortfolio'>" +
         "<img src='img/logo.png' alt=''>" +
         "<div class='circleContainer'>" +
+        "<img src='img/portfolio/024-left-arrow.svg' alt='' id='designPortfolio-spaceBountyHunter' class='arrow'> " +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
@@ -163,6 +174,7 @@ $("#portfolio").click(function () {
         "<div class='circle active'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
+        "<img src='img/portfolio/025-right-arrow.svg' alt='' id='designPortfolio-adlister' class='arrow'> " +
         "</div>" +
         "<h1>Design Projects</h1>" +
         "<div class='content'>" +
@@ -172,6 +184,7 @@ $("#portfolio").click(function () {
         "<div class='project' id='adlister'>" +
         "<img src='img/logo.png' alt=''>" +
         "<div class='circleContainer'>" +
+        "<img src='img/portfolio/024-left-arrow.svg' alt='' id='adlister-designPortfolio' class='arrow'> " +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
@@ -180,6 +193,7 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<div class='circle active'></div>" +
         "<div class='circle'></div>" +
+        "<img src='img/portfolio/025-right-arrow.svg' alt='' id='adlister-capstone' class='arrow'> " +
         "</div>" +
         "<h1>Ad Lister</h1>" +
         "<div class='content'>" +
@@ -189,6 +203,7 @@ $("#portfolio").click(function () {
         "<div class='project' id='capstone'>" +
         "<img src='img/logo.png' alt=''>" +
         "<div class='circleContainer'>" +
+        "<img src='img/portfolio/024-left-arrow.svg' alt='' id='capstone-adlister' class='arrow'> " +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
@@ -197,6 +212,7 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<div class='circle'></div>" +
         "<div class='circle active'></div>" +
+        "<img src='img/portfolio/025-right-arrow.svg' alt='' id='capstone-candyMonster' class='arrow'> " +
         "</div>" +
         "<h1>Capstone</h1>" +
         "<div class='content'>" +
@@ -204,45 +220,75 @@ $("#portfolio").click(function () {
         "</div>" +
         "</div>"
     );
-    $("#candyMonster").fadeIn("slow").click(function () {
-        $(this).fadeOut("slow");
-        $("#lofiWeatherMap").fadeIn("slow");
-    });
-    $("#lofiWeatherMap").click(function () {
-        $(this).fadeOut("slow");
-        $("#milHub").fadeIn("slow");
-    });
-    $("#milHub").click(function () {
-        $(this).fadeOut("slow");
-        $("#socialApe").fadeIn("slow");
-    });
-    $("#socialApe").click(function () {
-        $(this).fadeOut("slow");
-        $("#spaceBountyHunter").fadeIn("slow");
-    });
-    $("#spaceBountyHunter").click(function () {
-        $(this).fadeOut("slow");
-        $("#designPortfolio").fadeIn("slow");
-    });
-    $("#designPortfolio").click(function () {
-        $(this).fadeOut("slow");
-        $("#adlister").fadeIn("slow");
-    });
-    $("#adlister").click(function () {
-        $(this).fadeOut("slow");
+    $("#candyMonster").fadeIn("slow");
+    $("#candyMonster-capstone").click(function () {
+        $("#candyMonster").fadeOut("slow");
         $("#capstone").fadeIn("slow");
     });
-    $("#capstone").click(function () {
-        $(this).fadeOut("slow");
+    $("#candyMonster-lofiWeatherMap").click(function () {
+        $("#candyMonster").fadeOut("slow");
+        $("#lofiWeatherMap").fadeIn("slow");
+    });
+    $("#lofiWeatherMap-candyMonster").click(function () {
+        $("#lofiWeatherMap").fadeOut("slow");
         $("#candyMonster").fadeIn("slow");
     });
-
-//    carousel of images to scroll through for my portfolio at the top of the screen
-//    click on image and it populates the bottom section with information
+    $("#lofiWeatherMap-milHub").click(function () {
+        $("#lofiWeatherMap").fadeOut("slow");
+        $("#milHub").fadeIn("slow");
+    });
+    $("#milHub-lofiWeatherMap").click(function () {
+        $("#milHub").fadeOut("slow");
+        $("#lofiWeatherMap").fadeIn("slow");
+    });
+    $("#milHub-socialApe").click(function () {
+        $("#milHub").fadeOut("slow");
+        $("#socialApe").fadeIn("slow");
+    });
+    $("#socialApe-milHub").click(function () {
+        $("#socialApe").fadeOut("slow");
+        $("#milHub").fadeIn("slow");
+    });
+    $("#socialApe-spaceBountyHunter").click(function () {
+        $("#socialApe").fadeOut("slow");
+        $("#spaceBountyHunter").fadeIn("slow");
+    });
+    $("#spaceBountyHunter-socialApe").click(function () {
+        $("#spaceBountyHunter").fadeOut("slow");
+        $("#socialApe").fadeIn("slow");
+    });
+    $("#spaceBountyHunter-designPortfolio").click(function () {
+        $("#spaceBountyHunter").fadeOut("slow");
+        $("#designPortfolio").fadeIn("slow");
+    });
+    $("#designPortfolio-spaceBountyHunter").click(function () {
+        $("#designPortfolio").fadeOut("slow");
+        $("#spaceBountyHunter").fadeIn("slow");
+    });
+    $("#designPortfolio-adlister").click(function () {
+        $("#designPortfolio").fadeOut("slow");
+        $("#adlister").fadeIn("slow");
+    });
+    $("#adlister-designPortfolio").click(function () {
+        $("#adlister").fadeOut("slow");
+        $("#designPortfolio").fadeIn("slow");
+    });
+    $("#adlister-capstone").click(function () {
+        $("#adlister").fadeOut("slow");
+        $("#capstone").fadeIn("slow");
+    });
+    $("#capstone-adlister").click(function () {
+        $("#capstone").fadeOut("slow");
+        $("#adlister").fadeIn("slow");
+    });
+    $("#capstone-candyMonster").click(function () {
+        $("#capstone").fadeOut("slow");
+        $("#candyMonster").fadeIn("slow");
+    });
 });
 //-------------------------------------------//
 //-----------------SKILLS-------------------//
-//-------------------------------------------//$("#skills").click(function () {
+//-------------------------------------------//
 $("#skills").click(function () {
     $("#main").html(
         '<div style="position: relative; margin: 40%">' +

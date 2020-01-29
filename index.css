@@ -227,11 +227,19 @@ body{
     display: flex;
     margin-left: 45%;
 }
+.arrow{
+    height: 30px!important;
+    width: 30px!important;
+    background-color: red;
+    border-radius: 50%;
+
+}
 .circle{
     height: 20px;
     width: 20px;
     border-radius: 50%;
     background-color: black;
+    margin: 5px;
 }
 .active{
     background-color: red;
@@ -240,14 +248,15 @@ body{
     display: flex;
 }
 .picture{
-    width: 50%!important;
+    width: 600px!important;
     height: 400px!important;
-    margin-left: 20%;
-    margin-top: -20px;
+    margin-top: -40px;
 }
+
 .content p {
     font-size: 20px;
 }
+
 /*-------skills--------*/
 .text {
     position: absolute;
