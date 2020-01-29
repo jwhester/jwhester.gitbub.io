@@ -139,7 +139,7 @@ $("#portfolio").click(function () {
         "<h1>Social Ape</h1>" +
         "<div class='content'>" +
         "<p>Created a full stack, fully-featured social media application using React, Firebase, Redux, Express, and Material-UI. During this solo project I learned how to create a backend REST API server with Node.js and Express, user login and authentication, image uploads, notifications, cloud functions, and deploying to Firebase.</p>" +
-        "<img src='' alt=''>" +
+        "<video class='picture' controls='controls'  src='img/portfolio/socialapeClip.mov'></video>" +
         "</div>" +
         "</div>" +
         "<div class='project' id='spaceBountyHunter'>" +
