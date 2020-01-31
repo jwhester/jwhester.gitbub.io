@@ -1,6 +1,9 @@
 //-------------------------------------------//
 //-----------------MAIN-------------------//
 //-------------------------------------------//
+$(document).ready(function () {
+    alert("Please note this site is still under construction and not all features may be available.")
+});
 $("#logo").click(function () {
     $("#main").html(
         '<div class="mainpic">' +
