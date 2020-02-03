@@ -8,7 +8,7 @@ $(document).ready(function () {
         let blurb = $(this);
         if (blurb.css("visibility") === "hidden") {
             setTimeout(function () {
-                blurb.css("visibility", "visible").animate({fontSize: "50px"}, 500).animate({fontSize: "40px"}, 500);
+                blurb.css("visibility", "visible");
             }, blurb.index() * 100)
         }
     });
@@ -23,7 +23,7 @@ $("#logo").click(function () {
         let blurb = $(this);
         if (blurb.css("visibility") === "hidden") {
             setTimeout(function () {
-                blurb.css("visibility", "visible").animate({fontSize: "50px"}, 500).animate({fontSize: "40px"}, 500);
+                blurb.css("visibility", "visible");
             }, blurb.index() * 100)
         }
     });
@@ -56,7 +56,7 @@ $("#about").click(function () {
     });
     $(".disney").mouseenter(function () {
         $(this).html(
-            '<p>Disney World with my family</p>'
+            '<p>Disney World with my family.</p>'
         )
     }).mouseleave(function () {
         $(this).html("")
@@ -76,7 +76,7 @@ $("#portfolio").click(function () {
     $("#main").html(
         "<div id='portfolioMain'> " +
         "<div class='project' id='candyMonster'>" +
-        "<img src='img/portfolio/candyMonster.png' alt=''>" +
+        "<img class='projectPic' src='img/portfolio/candyMonster.png' alt=''>" +
         "<div class='circleContainer'> " +
         "<img src='img/portfolio/024-left-arrow.svg' alt='' id='candyMonster-capstone' class='arrow'> " +
         "<div class='circle active'></div>" +
@@ -89,14 +89,16 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<img src='img/portfolio/025-right-arrow.svg' alt='' id='candyMonster-lofiWeatherMap' class='arrow'> " +
         "</div>" +
-        "<h1>Candy Monster</h1>" +
+        "<h1 class='contentTitle'>Candy Monster</h1>" +
         "<div class='content'>" +
+        "<div class='contentDesc'>" +
         "<p>A choose your own adventure game with a Halloween theme.</p>" +
+        "</div>" +
         "<video class='picture' controls='controls'  src='img/portfolio/candyMonsterClip.mov'></video>" +
         "</div>" +
         "</div>" +
         "<div class='project' id='lofiWeatherMap'>" +
-        "<img src='img/portfolio/lofi.png' alt=''>" +
+        "<img class='projectPic' src='img/portfolio/lofi.png' alt=''>" +
         "<div class='circleContainer'>" +
         "<img src='img/portfolio/024-left-arrow.svg' alt='' id='lofiWeatherMap-candyMonster' class='arrow'> " +
         "<div class='circle'></div>" +
@@ -109,8 +111,9 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<img src='img/portfolio/025-right-arrow.svg' alt='' id='lofiWeatherMap-milHub' class='arrow'> " +
         "</div>" +
-        "<h1>Lofi Weather Map</h1>" +
+        "<h1 class='contentTitle'>Lofi Weather Map</h1>" +
         "<div class='content'>" +
+        "<div class='contentDesc'>" +
         "<p>Weather Map is a Javascript driven application\n" +
         "that forecast the weather anywhere in the\n" +
         "world in a 3 day format(Current day and the\n" +
@@ -119,11 +122,12 @@ $("#portfolio").click(function () {
         "Api we are able to get both Databases\n" +
         "to asynchronously get information to display\n" +
         "realtime information to users.</p>" +
+        "</div>" +
         "<img class='picture' src='img/portfolio/map.png' alt=''>" +
         "</div>" +
         "</div>" +
         "<div class='project' id='milHub'>" +
-        "<img src='img/portfolio/milHub.png' alt=''>" +
+        "<img class='projectPic' src='img/portfolio/milHub.png' alt=''>" +
         "<div class='circleContainer'>" +
         "<img src='img/portfolio/024-left-arrow.svg' alt='' id='milHub-lofiWeatherMap' class='arrow'> " +
         "<div class='circle'></div>" +
@@ -136,14 +140,20 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<img src='img/portfolio/025-right-arrow.svg' alt='' id='milHub-socialApe' class='arrow'> " +
         "</div>" +
-        "<h1>Milhub</h1>" +
+        "<h1 class='contentTitle'>Milhub</h1>" +
         "<div class='content'>" +
-        "<p>3rd place winner and crowd favorite at Geekdoms Veteran Code-a-thon. Milhub is a search engine where companies that are military and GI Bill friendly can advertise themselves and members can leave reviews for future users. </p>" +
+        "<div class='contentDesc'>" +
+        "<p>Third place winner and crowd favorite at Geekdoms Veteran Code-a-thon. Milhub is a search engine where companies that are military and GI Bill friendly can advertise themselves and members can leave reviews for future users. </p>" +
+        "<div class='awards'>" +
+        "<img src='img/svg/026-badge.svg' alt='' style='height: 60px'>" +
+        "<img src='img/svg/027-award.svg' alt='' style='height: 60px'>" +
+        "</div>" +
+        "</div>" +
         "<video class='picture' controls='controls'  src='img/portfolio/milhubClip.mov'></video>" +
         "</div>" +
         "</div>" +
         "<div class='project' id='socialApe'>" +
-        "<img src='img/portfolio/ape.png' alt=''>" +
+        "<img class='projectPic' src='img/portfolio/ape.png' alt=''>" +
         "<div class='circleContainer'>" +
         "<img src='img/portfolio/024-left-arrow.svg' alt='' id='socialApe-milHub' class='arrow'> " +
         "<div class='circle'></div>" +
@@ -156,14 +166,16 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<img src='img/portfolio/025-right-arrow.svg' alt='' id='socialApe-spaceBountyHunter' class='arrow'> " +
         "</div>" +
-        "<h1>Social Ape</h1>" +
+        "<h1 class='contentTitle'>Social Ape</h1>" +
         "<div class='content'>" +
+        "<div class='contentDesc'>" +
         "<p>Created a full stack, fully-featured social media application using React, Firebase, Redux, Express, and Material-UI. During this solo project I learned how to create a backend REST API server with Node.js and Express, user login and authentication, image uploads, notifications, cloud functions, and deploying to Firebase.</p>" +
+        "</div>" +
         "<video class='picture' controls='controls'  src='img/portfolio/socialapeClip.mov'></video>" +
         "</div>" +
         "</div>" +
         "<div class='project' id='spaceBountyHunter'>" +
-        "<img src='img/portfolio/bountyhunter.png' alt=''>" +
+        "<img class='projectPic' src='img/portfolio/bountyhunter.png' alt=''>" +
         "<div class='circleContainer'>" +
         "<img src='img/portfolio/024-left-arrow.svg' alt='' id='spaceBountyHunter-socialApe' class='arrow'> " +
         "<div class='circle'></div>" +
@@ -176,14 +188,16 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<img src='img/portfolio/025-right-arrow.svg' alt='' id='spaceBountyHunter-designPortfolio' class='arrow'> " +
         "</div>" +
-        "<h1>Space Bounty Hunter</h1>" +
+        "<h1 class='contentTitle'>Space Bounty Hunter</h1>" +
         "<div class='content'>" +
+        "<div class='contentDesc'>" +
         "<p>A space themed RPG reminiscent of the old school RPG's.</p>" +
+        "</div>" +
         "<img class='picture' src='img/portfolio/sbh.png' alt=''>" +
         "</div>" +
         "</div>" +
         "<div class='project' id='designPortfolio'>" +
-        "<img src='img/logo.png' alt=''>" +
+        "<img class='projectPic' src='img/logo.png' alt=''>" +
         "<div class='circleContainer'>" +
         "<img src='img/portfolio/024-left-arrow.svg' alt='' id='designPortfolio-spaceBountyHunter' class='arrow'> " +
         "<div class='circle'></div>" +
@@ -196,13 +210,15 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<img src='img/portfolio/025-right-arrow.svg' alt='' id='designPortfolio-adlister' class='arrow'> " +
         "</div>" +
-        "<h1>Design Projects</h1>" +
+        "<h1 class='contentTitle'>Design Projects</h1>" +
         "<div class='content'>" +
+        "<div class='contentDesc'>" +
+        "</div>" +
         "<img src='' alt=''>" +
         "</div>" +
         "</div>" +
         "<div class='project' id='adlister'>" +
-        "<img src='img/logo.png' alt=''>" +
+        "<img class='projectPic' src='img/logo.png' alt=''>" +
         "<div class='circleContainer'>" +
         "<img src='img/portfolio/024-left-arrow.svg' alt='' id='adlister-designPortfolio' class='arrow'> " +
         "<div class='circle'></div>" +
@@ -215,13 +231,15 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<img src='img/portfolio/025-right-arrow.svg' alt='' id='adlister-capstone' class='arrow'> " +
         "</div>" +
-        "<h1>Ad Lister</h1>" +
+        "<h1 class='contentTitle'>Ad Lister</h1>" +
         "<div class='content'>" +
+        "<div class='contentDesc'>" +
+        "</div>" +
         "<img src='' alt=''>" +
         "</div>" +
         "</div>" +
         "<div class='project' id='capstone'>" +
-        "<img src='img/logo.png' alt=''>" +
+        "<img class='projectPic' src='img/logo.png' alt=''>" +
         "<div class='circleContainer'>" +
         "<img src='img/portfolio/024-left-arrow.svg' alt='' id='capstone-adlister' class='arrow'> " +
         "<div class='circle'></div>" +
@@ -234,8 +252,10 @@ $("#portfolio").click(function () {
         "<div class='circle active'></div>" +
         "<img src='img/portfolio/025-right-arrow.svg' alt='' id='capstone-candyMonster' class='arrow'> " +
         "</div>" +
-        "<h1>Capstone</h1>" +
+        "<h1 class='contentTitle'>Capstone</h1>" +
         "<div class='content'>" +
+        "<div class='contentDesc'>" +
+        "</div>" +
         "<img src='' alt=''>" +
         "</div>" +
         "</div>"
