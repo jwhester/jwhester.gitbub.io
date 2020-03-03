@@ -56,7 +56,7 @@ $("#about").click(function () {
     });
     $(".disney").mouseenter(function () {
         $(this).html(
-            '<p>Disney World with my family.</p>'
+            '<p>Disney World with my family!</p>'
         )
     }).mouseleave(function () {
         $(this).html("")
@@ -231,7 +231,7 @@ $("#portfolio").click(function () {
         "<div class='circle'></div>" +
         "<img src='img/portfolio/025-right-arrow.svg' alt='' id='adlister-capstone' class='arrow'> " +
         "</div>" +
-        "<h1 class='contentTitle'>Ad Lister</h1>" +
+        "<h1 class='contentTitle'>Planet Lister</h1>" +
         "<div class='content'>" +
         "<div class='contentDesc'>" +
         "</div>" +
@@ -252,7 +252,7 @@ $("#portfolio").click(function () {
         "<div class='circle active'></div>" +
         "<img src='img/portfolio/025-right-arrow.svg' alt='' id='capstone-candyMonster' class='arrow'> " +
         "</div>" +
-        "<h1 class='contentTitle'>Capstone</h1>" +
+        "<h1 class='contentTitle'>Mentor</h1>" +
         "<div class='content'>" +
         "<div class='contentDesc'>" +
         "</div>" +
